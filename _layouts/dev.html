@@ -1,0 +1,47 @@
+<!--
+"https://denali-template.webflow.io/
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ site.title }}</title>
+    <link rel="stylesheet" href="/assets/css/main-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</head>
+<body>
+{{ site.title }}
+
+<ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
+
+<div class="posts">
+    {% for post in site.posts %}
+    <a class="post" href="{{post.url}}">
+        {% if post.image %}
+        <img alt="{{post.title}}" src="{{post.image}}">
+        {% endif %}
+        <div class="text-elements">
+            <h2>{{post.title}}</h2>
+            <p>{{post.description}}</p>
+        </div>
+    </a>
+    {% endfor %}
+</div>
+
+<about>
+    <p>This is some about text that is very important</p>
+    <p>Featured posts:</p>
+
+    <ul>
+        <!-- site.posts.first is the most recent post and site.posts.last is the oldest post-->
+        <li><a href="{{site.posts.first.url}}">{{site.posts.first.title}}</a></li>
+        <li><a href="{{site.posts.last.url}}">{{site.posts.last.title}}</a></li>
+    </ul>
+</about>
+</body>
+</html>

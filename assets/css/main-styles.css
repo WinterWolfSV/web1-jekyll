@@ -1,0 +1,40 @@
+body {
+  background-color: #F0F0F0;
+  font-family: "Lato", sans-serif;
+}
+
+.posts {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.posts .post {
+  border: 1px #E2E2E2 solid;
+  border-radius: 6px;
+  width: 40%;
+  background-color: #FFF;
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  height: 200px;
+}
+.posts .post img {
+  position: relative;
+  border-radius: 4px;
+  height: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+.posts .post .text-elements {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.posts .post .text-elements h2 {
+  font-size: 22px;
+  color: #000;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=main-styles.css.map */
