@@ -19,29 +19,35 @@
     <li><a href="#">Contact</a></li>
 </ul>
 
-<div class="posts">
-    {% for post in site.posts %}
-    <a class="post" href="{{post.url}}">
-        {% if post.image %}
-        <img alt="{{post.title}}" src="{{post.image}}">
-        {% endif %}
-        <div class="text-elements">
-            <h2>{{post.title}}</h2>
-            <p>{{post.description}}</p>
-        </div>
-    </a>
-    {% endfor %}
+<div class="center-content">
+    <about>
+        <img src="../assets/images/profile_picture.gif" alt="some post">
+        <p> This is a website the very best website of them all that has ever been, and it is the best website that will
+            ever be and if you do not agree I shan't let you live for any longer than you need.
+        </p>
+        <p>Featured posts:</p>
+
+        <ul>
+            <!-- site.posts.first is the most recent post and site.posts.last is the oldest post-->
+            <li><a href="{{site.posts.first.url}}">{{site.posts.first.title}}</a></li>
+            <li><a href="{{site.posts.last.url}}">{{site.posts.last.title}}</a></li>
+        </ul>
+    </about>
+    <div class="posts">
+        {% for post in site.posts %}
+        <a class="post" href="{{post.url}}">
+            {% if post.image %}
+            <img alt="{{post.title}}" src="{{post.image}}">
+            {% endif %}
+            <div class="text-elements">
+                <h2>{{post.title}}</h2>
+                <p>{{post.description}}</p>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+
 </div>
 
-<about>
-    <p>This is some about text that is very important</p>
-    <p>Featured posts:</p>
-
-    <ul>
-        <!-- site.posts.first is the most recent post and site.posts.last is the oldest post-->
-        <li><a href="{{site.posts.first.url}}">{{site.posts.first.title}}</a></li>
-        <li><a href="{{site.posts.last.url}}">{{site.posts.last.title}}</a></li>
-    </ul>
-</about>
 </body>
 </html>
