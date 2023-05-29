@@ -1,0 +1,17 @@
+---
+layout: posts
+title:  "CSS"
+date:   2023-04-22 10:44:06 +0200
+categories: jekyll update
+image: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png
+description: En kort beskivning av CSS
+---
+Css ändrar utseendet på HTMLen och har ett syntax av selektorer och deklarationer. Selektorer väljer ut vilka element
+som ska ändras och deklarationer bestämmer hur de ska ändras. Ett exempel kommer nedan som ändrar färgen på alla p
+element till röd:
+
+```css
+p {
+    color: red;
+}
+```

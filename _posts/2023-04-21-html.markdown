@@ -1,0 +1,19 @@
+---
+layout: posts
+title:  "HTML"
+date:   2023-04-21 10:44:06 +0200
+categories: jekyll update
+image: https://i.stack.imgur.com/PgcSR.png
+description: En kort beskivning av HTML
+---
+HTML står för Hypertext Markup Language och är ett märkspråk som används på webben för att visa text på hemsidor och i
+vissa applikationer. HTMLs syntax består av taggar som oftast börjar med <> och avslutas med </>. Ett exempel på en
+hemsida med en <p> tagg som innehåller texten "Hello World" ser ut såhär:
+
+```html
+<html>
+    <body>
+        <p id="demo">Hello World</p>
+    </body>
+</html>
+```
